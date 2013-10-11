@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Fri, 11 Oct 2013 08:20:08 -0500
+Source: collectd
+Binary: python-collectd
+Architecture: source all
+Version: 1.0.2-1
+Distribution: unstable
+Urgency: low
+Maintainer: Cisco Systems <cisco@cisco.com>
+Changed-By: Cisco Systems <cisco@cisco.com>
+Description: 
+ python-collectd - library for sending statistics over UDP to collectd servers
+Changes: 
+ collectd (1.0.2-1) unstable; urgency=low
+ .
+   * source package automatically created by stdeb 0.6.0+git
+Checksums-Sha1: 
+ 931285ea485db58e83feb9ab8749279885d31018 839 collectd_1.0.2-1.dsc
+ 8424b06843b74e581ae5c80eb2f50b9e7cef5824 139754 collectd_1.0.2.orig.tar.gz
+ 237678e901fa9e04d1b0fdd5080bb45debcd799c 804 collectd_1.0.2-1.debian.tar.gz
+ 1f67946c4a0fe32728e0140bcd67bc6d9f54dbd6 5076 python-collectd_1.0.2-1_all.deb
+Checksums-Sha256: 
+ 1c6a0d59b8646cde70a38269086a2175891cbf3fdb8861b99d88eb5a1df236b4 839 collectd_1.0.2-1.dsc
+ 1cb7192f539545fa35f6791d546feaceda39086bab02fcb7a2d377c76272a834 139754 collectd_1.0.2.orig.tar.gz
+ 34ea9dc4dea9c3c31b517e3c121d346c32757e78102768dcf1ca33fa804a1047 804 collectd_1.0.2-1.debian.tar.gz
+ 47c8d9ad435a4b86bcb6b6c4cfdfc4fb9fdcbdb722cf03f6f8eda2314550e656 5076 python-collectd_1.0.2-1_all.deb
+Files: 
+ a6537456df6a621a5176819759e65667 839 python optional collectd_1.0.2-1.dsc
+ 780470566a0bf4dbf4fcbb642910cfdf 139754 python optional collectd_1.0.2.orig.tar.gz
+ 81867c1c16c3ffb67104bf6fc65c2b7d 804 python optional collectd_1.0.2-1.debian.tar.gz
+ 526d71a36c434a11d15484e650d7b197 5076 python optional python-collectd_1.0.2-1_all.deb

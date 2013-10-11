@@ -1,0 +1,120 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): -D_FORTIFY_SOURCE=2
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): -Wl,-Bsymbolic-functions -Wl,-z,relro
+dpkg-buildpackage: source package collectd
+dpkg-buildpackage: source version 1.0.2-1
+dpkg-buildpackage: source changed by Cisco Systems <cisco@cisco.com>
+ dpkg-source --before-build collectd-1.0.2
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_clean -O--buildsystem=python_distutils
+running clean
+removing 'build/lib.linux-x86_64-2.7' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+removing 'build'
+   dh_clean -O--buildsystem=python_distutils
+ dpkg-source -b collectd-1.0.2
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building collectd using existing ./collectd_1.0.2.orig.tar.gz
+dpkg-source: info: building collectd in collectd_1.0.2-1.debian.tar.gz
+dpkg-source: info: building collectd in collectd_1.0.2-1.dsc
+ debian/rules build
+dh build --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_configure -O--buildsystem=python_distutils
+   dh_auto_build -O--buildsystem=python_distutils
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+copying collectd.py -> build/lib.linux-x86_64-2.7
+   dh_auto_test -O--buildsystem=python_distutils
+ fakeroot debian/rules binary
+dh binary --with python2 --buildsystem=python_distutils
+   dh_testroot -O--buildsystem=python_distutils
+   dh_prep -O--buildsystem=python_distutils
+   dh_installdirs -O--buildsystem=python_distutils
+   dh_auto_install -O--buildsystem=python_distutils
+running install
+running build
+running build_py
+running install_lib
+creating /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr
+creating /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr/lib
+creating /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr/lib/python2.7
+creating /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr/lib/python2.7/dist-packages
+copying build/lib.linux-x86_64-2.7/collectd.py -> /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr/lib/python2.7/dist-packages
+running install_egg_info
+running egg_info
+writing collectd.egg-info/PKG-INFO
+writing top-level names to collectd.egg-info/top_level.txt
+writing dependency_links to collectd.egg-info/dependency_links.txt
+reading manifest file 'collectd.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'collectd.egg-info/SOURCES.txt'
+Copying collectd.egg-info to /opt/build/deb_dist/collectd-1.0.2/debian/python-collectd/usr/lib/python2.7/dist-packages/collectd-1.0.2.egg-info
+running install_scripts
+   dh_install -O--buildsystem=python_distutils
+   dh_installdocs -O--buildsystem=python_distutils
+   dh_installchangelogs -O--buildsystem=python_distutils
+   dh_installexamples -O--buildsystem=python_distutils
+   dh_installman -O--buildsystem=python_distutils
+   dh_installcatalogs -O--buildsystem=python_distutils
+   dh_installcron -O--buildsystem=python_distutils
+   dh_installdebconf -O--buildsystem=python_distutils
+   dh_installemacsen -O--buildsystem=python_distutils
+   dh_installifupdown -O--buildsystem=python_distutils
+   dh_installinfo -O--buildsystem=python_distutils
+   dh_installinit -O--buildsystem=python_distutils
+   dh_installmenu -O--buildsystem=python_distutils
+   dh_installmime -O--buildsystem=python_distutils
+   dh_installmodules -O--buildsystem=python_distutils
+   dh_installlogcheck -O--buildsystem=python_distutils
+   dh_installlogrotate -O--buildsystem=python_distutils
+   dh_installpam -O--buildsystem=python_distutils
+   dh_installppp -O--buildsystem=python_distutils
+   dh_installudev -O--buildsystem=python_distutils
+   dh_installwm -O--buildsystem=python_distutils
+   dh_installxfonts -O--buildsystem=python_distutils
+   dh_installgsettings -O--buildsystem=python_distutils
+   dh_bugfiles -O--buildsystem=python_distutils
+   dh_ucf -O--buildsystem=python_distutils
+   dh_lintian -O--buildsystem=python_distutils
+   dh_gconf -O--buildsystem=python_distutils
+   dh_icons -O--buildsystem=python_distutils
+   dh_perl -O--buildsystem=python_distutils
+   dh_python2 -O--buildsystem=python_distutils
+   dh_usrlocal -O--buildsystem=python_distutils
+   dh_link -O--buildsystem=python_distutils
+   dh_compress -O--buildsystem=python_distutils
+   dh_fixperms -O--buildsystem=python_distutils
+   dh_installdeb -O--buildsystem=python_distutils
+   dh_gencontrol -O--buildsystem=python_distutils
+dpkg-gencontrol: warning: package python-collectd: unused substitution variable ${python:Versions}
+dpkg-gencontrol: warning: package python-collectd: unused substitution variable ${python:Provides}
+   dh_md5sums -O--buildsystem=python_distutils
+   dh_builddeb -O--buildsystem=python_distutils
+dpkg-deb: building package `python-collectd' in `../python-collectd_1.0.2-1_all.deb'.
+ dpkg-genchanges  >../collectd_1.0.2-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build collectd-1.0.2
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+W: collectd source: no-debian-copyright
+W: collectd source: out-of-date-standards-version 3.9.1 (current is 3.9.3)
+W: python-collectd: new-package-should-close-itp-bug
+E: python-collectd: no-copyright-file
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile collectd_1.0.2-1.dsc Cisco Systems <cisco@cisco.com>
+gpg: skipped "Cisco Systems <cisco@cisco.com>": secret key not available
+gpg: /tmp/debsign.Oveqmi7Q/collectd_1.0.2-1.dsc: clearsign failed: secret key not available
+debsign: gpg error occurred!  Aborting....

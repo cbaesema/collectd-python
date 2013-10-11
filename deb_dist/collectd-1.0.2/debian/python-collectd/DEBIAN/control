@@ -1,0 +1,14 @@
+Package: python-collectd
+Source: collectd
+Version: 1.0.2-1
+Architecture: all
+Maintainer: Cisco Systems <cisco@cisco.com>
+Installed-Size: 58
+Depends: python2.7, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Section: python
+Priority: optional
+Description: library for sending statistics over UDP to collectd servers
+ This Python module implements the binary protocol used by the collectd Network
+ plugin to let you send arbitrary numeric data to collectd servers. Other than
+ turning on the Network plugin on the destination collectd server, no
+ configuration is needed.
